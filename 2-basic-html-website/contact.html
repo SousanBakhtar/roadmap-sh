@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO meta tag -->
+    <meta
+      name="description"
+      content="Learn the basics of frontend development"
+    />
+    <meta name="author" content="susan bakhtar" />
+
+    <!-- google-font-CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/contact.css" />
+
+    <title>Contact - Frontend Developer</title>
+
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="multy-them-color-container">
+      <!-- muley-them-component-->
+      <!-- color-palet-1 -->
+      <input name="color-palet" class="warm-color-input" type="radio" />
+
+      <!-- color-palet-2-->
+      <input name="color-palet" class="summer-color-input" type="radio" />
+
+      <!-- color-palet-3-->
+      <input name="color-palet" class="pastel-color-input" type="radio" />
+
+      <header>
+        <!-- top -->
+        <div class="header-top-container">
+          <!-- logo -->
+          <div class="logo">
+            <a href="./index.html">
+              <figure>
+                <img src="../imgs/susan-bakhtar.jpg" alt="logo-susan" />
+              </figure>
+            </a>
+            <p><strong>Susan Bakhtar</strong></p>
+          </div>
+
+          <!-- nav -->
+          <nav>
+            <!-- right-nav-container -->
+            <ul class="right-nav-container">
+              <li><a href="./">Home</a>&nbsp; /</li>
+              <li><a href="./project.html">Project </a>&nbsp; /</li>
+              <li><a href="./article.html">Article </a>&nbsp; /</li>
+              <li><a href="./contact.html">Contact </a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- header-center-container -->
+        <div class="header-center-container">
+          <h1>Frontend Developer</h1>
+          <p>html only with proper layout, no styling</p>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>Get in Touch</h2>
+          <p>
+            If you have any questions, suggestions, or just want to say hello,
+            feel free to contact me through the form below:
+          </p>
+
+          <form action="" method="post">
+            <label for="name"></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Your Name:"
+            />
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Your Email"
+            />
+
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Your Message:"
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 All rights reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

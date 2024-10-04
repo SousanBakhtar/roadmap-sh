@@ -1,0 +1,38 @@
+@import "./global.css";
+@import "./components/header-component.css";
+@import "./components/footer-component.css";
+@import "./media.css";
+
+main {
+  padding: 5vmin;
+  max-width: 900px;
+  width: 90vw;
+  margin: auto;
+  line-height: 1.6;
+}
+
+section {
+  border-color: var(--border-light-primary-color);
+  box-shadow: var(--box-shadow-light-primary-color);
+  padding: 2vmin;
+}
+
+main ul li {
+  list-style: none;
+  padding: 2vmin;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin: 2rem auto;
+  color: var(--dark-primary-color);
+}
+
+h3 {
+  margin: 1rem 0;
+  color: var(--dark-primary-color);
+  border-color: var(--border-light-primary-color);
+  box-shadow: var(--box-shadow-light-primary-color);
+  width: fit-content;
+}

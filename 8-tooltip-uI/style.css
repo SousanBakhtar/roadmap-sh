@@ -1,0 +1,153 @@
+:root {
+  /* 1rem = 10px */
+  /* (10px * 100 ) / 16 */
+  --text-size: 62.5%;
+
+  --text-primary-color: #333;
+
+  --selection-primary-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  font-size: var(--text-size);
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--text-primary-color);
+  line-height: 1.6;
+  word-wrap: keep-all;
+  font-size: calc(var(--text-size) + 1.5vmin);
+
+  font-family: "Afacad Flux", sans-serif;
+  min-height: 100svh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+
+  background-color: #d8d2c2;
+}
+
+/* body::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0;
+} */
+
+::selection {
+  background: var(--selection-primary-color);
+}
+
+/* start */
+nav {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  gap: 10vmin;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  gap: 0.9rem;
+  flex-shrink: 1;
+
+  position: relative;
+}
+
+span {
+  background: #faf7f0;
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+  visibility: hidden;
+
+  /* for position */
+  position: absolute;
+  left: 50%;
+  bottom: 150%;
+  transform: translateX(-50%);
+}
+
+span:before {
+  position: absolute;
+  content: "";
+
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #faf7f0 transparent transparent transparent;
+}
+a:hover span {
+  visibility: initial;
+  color: #a99282;
+}
+/* All Effect */
+
+/* faide-in effect */
+.home span {
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.home:hover span {
+  opacity: 1;
+}
+
+/* zoom-effect */
+.project span {
+  scale: 0;
+
+  opacity: 0;
+}
+.project:hover span {
+  opacity: 1;
+  scale: 1.1;
+}
+
+/* effect bottom to top */
+.services span {
+  transform: translateY(10px);
+  visibility: visible;
+  opacity: 0;
+
+  /* for position:  */
+  left: 0;
+  margin-left: -1rem;
+}
+
+.services:hover span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.contact span {
+  opacity: 0;
+  scale: 0.7;
+  rotate: 50deg;
+}
+
+.contact:hover span {
+  opacity: 1;
+  scale: 1.1;
+  rotate: initial;
+}

@@ -1,0 +1,5 @@
+.multy-them-color-container > footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--dark-primary-color);
+}

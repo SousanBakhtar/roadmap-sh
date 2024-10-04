@@ -1,0 +1,85 @@
+:root {
+  --warm-primary-color: F7EED3;
+
+  --dark-primary-color: #333;
+
+  --green-primary-color: #54c392;
+
+  --blue-primary-color: #87a2ff;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 100;
+}
+
+html,
+body {
+  height: 100%;
+  transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  /* 1rem = 10px */
+  /* (10px * 100 ) / 16 */
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--dark-primary-color);
+
+  padding: 6vmin;
+  line-height: 1.9;
+  font-size: 1.5rem;
+  word-wrap: keep-all;
+  padding: 6vmin 0;
+  height: auto;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::selection {
+  background: var(--warm-primary-color);
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+h2 {
+  color: var(--green-primary-color);
+  padding: 0.7vmin 0;
+}
+
+h3 {
+  color: var(--blue-primary-color);
+}
+
+/* start-style */
+body > * {
+  max-width: 600px;
+  width: 80vw;
+  margin: auto;
+}
+
+header {
+  border-top: 1px solid var(--blue-primary-color);
+  padding-top: 2vmin;
+}
+
+footer ul {
+  list-style: none;
+}

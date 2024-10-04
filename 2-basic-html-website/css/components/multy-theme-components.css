@@ -1,0 +1,74 @@
+input {
+  cursor: pointer;
+}
+
+input:focus {
+  border: none;
+}
+
+/* color-palet-1 */
+.warm-color-input,
+.summer-color-input,
+.pastel-color-input {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  height: 2rem;
+  width: 2rem;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.warm-color-input:before,
+.summer-color-input:before,
+.pastel-color-input:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0;
+}
+
+/* warm-color-input background */
+.warm-color-input:before {
+  background-color: #7c00fe;
+}
+
+/* summer-color-input background */
+.summer-color-input {
+  top: 55%;
+}
+
+.summer-color-input:before {
+  background-color: #a79277;
+}
+
+/* pastel-color-input background */
+.pastel-color-input {
+  top: 60%;
+}
+
+.pastel-color-input:before {
+  background-color: #333;
+}
+
+/* setting-color-palet-1 */
+.warm-color-input:checked ~ * {
+  --dark-primary-color: #7c00fe;
+  --light-primary-color: #ede4ff;
+  --main-theme-color: #ede4ff;
+  --selection-primary-color: #7b00fe8f;
+}
+
+/* setting-color-palet-2 */
+.summer-color-input:checked ~ * {
+  --dark-primary-color: #a79277;
+  --selection-primary-color: #a7927793;
+}
+
+.pastel-color-input:checked ~ * {
+  --dark-primary-color: #333;
+  --selection-primary-color: #fff;
+}

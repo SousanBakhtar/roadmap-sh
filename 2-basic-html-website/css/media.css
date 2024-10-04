@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+  :root {
+    --text-size: 74%;
+  }
+
+  h2,
+  h3 {
+    border-color: var(--border-light-primary-color);
+    box-shadow: var(--box-shadow-light-primary-color);
+    width: fit-content;
+  }
+
+  .header-top-container {
+    flex-flow: column;
+    gap: 2vmin;
+  }
+
+  .logo {
+    flex-flow: column;
+  }
+}
